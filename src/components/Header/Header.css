@@ -1,0 +1,144 @@
+.header {
+  min-height: 100vh;
+  min-width: 100%;
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url("https://images.unsplash.com/photo-1504639725590-34d0984388bd?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2274&q=80");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-color: #191714;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.header_left {
+  max-width: 60%;
+}
+
+.header_left > span {
+  padding: 20px;
+  border-radius: 5px;
+  background-image: linear-gradient(to bottom right, #191714, #2234ae);
+  border: 1px solid gray;
+  letter-spacing: 2px;
+  word-spacing: 2px;
+  font-size: 18px;
+  color: white;
+  font-weight: bold;
+}
+
+.header_left > h1,
+.header_left > h2 {
+  letter-spacing: 2px;
+  word-spacing: 2px;
+  color: white;
+  padding: 0;
+  margin-top: 50px;
+  font-size: 80px;
+  animation: fromLeft 0.5s linear;
+}
+
+.header_left > h2 {
+  font-size: 50px;
+  margin-top: 0px;
+  margin-bottom: 10px;
+}
+
+.header_left > p {
+  width: 80%;
+  color: rgb(154, 154, 154);
+  letter-spacing: 2px;
+  word-spacing: 5px;
+  font-size: 18px;
+  line-height: 1.6;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 5;
+  overflow: hidden;
+  animation: pop-in 0.5s linear forwards;
+  animation-delay: 0.5s;
+  transform: scale(0);
+}
+
+.header_left > button {
+  font-size: 15px;
+  color: #2234ae;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 10px;
+  border: 1px solid #2234ae;
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 30px;
+  padding: 10px 15px;
+  transition: all 0.3s;
+  animation: show-in 1s linear forwards;
+  animation-delay: 1s;
+  opacity: 0;
+}
+
+.header_left > button:hover {
+  color: white;
+  border: 1px solid white;
+  background-color: #2234ae;
+  transform: scale(1.1);
+}
+
+.header_left > button > span {
+  padding-right: 10px;
+}
+
+.header_right {
+  animation: pop-in 0.5s linear;
+}
+
+.header_right > img {
+  width: 25vw;
+  object-fit: cover;
+  border-radius: 50%;
+  animation: MoveUpDown 2s linear infinite;
+}
+
+@keyframes MoveUpDown {
+  0% {
+    transform: translateY(-30px);
+  }
+
+  50% {
+    transform: translateY(30px);
+  }
+  100% {
+    transform: translateY(-30px);
+  }
+}
+
+@keyframes pop-in {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+@keyframes show-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fromLeft {
+  from {
+    transform: translateX(-50vw);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
