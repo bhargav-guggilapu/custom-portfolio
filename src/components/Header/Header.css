@@ -62,7 +62,7 @@
   transform: scale(0);
 }
 
-.header_left > button {
+.header_left > a > button {
   font-size: 15px;
   color: #2234ae;
   font-weight: bold;
@@ -81,14 +81,14 @@
   opacity: 0;
 }
 
-.header_left > button:hover {
+.header_left > a > button:hover {
   color: white;
   border: 1px solid white;
   background-color: #2234ae;
   transform: scale(1.1);
 }
 
-.header_left > button > span {
+.header_left > a > button > span {
   padding-right: 10px;
 }
 

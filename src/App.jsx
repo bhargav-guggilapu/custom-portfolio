@@ -1,4 +1,5 @@
 import { useEffect } from "react";
+import Contact from "./components/Contact/Contact";
 import Header from "./components/Header/Header";
 import NavBar from "./components/NavBar/NavBar";
 
@@ -19,7 +20,9 @@ function App() {
       <div id="experience"></div>
       <div id="skills"></div>
       <div id="projects"></div>
-      <div id="contact"></div>
+      <div id="contact">
+        <Contact />
+      </div>
     </>
   );
 }

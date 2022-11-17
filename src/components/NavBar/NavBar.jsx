@@ -12,7 +12,6 @@ import { styled } from "@mui/material/styles";
 
 export default function NavBar() {
   const [scrolled, setScrolled] = useState(false);
-  const [clickedLink, setClickedLink] = useState("home");
 
   const BootstrapTooltip = styled(({ className, ...props }) => (
     <Tooltip

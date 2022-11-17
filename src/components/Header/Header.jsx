@@ -2,6 +2,7 @@ import React from "react";
 import "./Header.css";
 import ArrowCircleRightIcon from "@mui/icons-material/ArrowCircleRight";
 import Typewriter from "typewriter-effect";
+import { Link } from "react-scroll";
 
 export default function Header({ url }) {
   return (
@@ -37,10 +38,18 @@ export default function Header({ url }) {
             obcaecati, ea quidem ab numquam. Nam ipsam excepturi a, voluptatem
             temporibus fugit.
           </p>
-          <button>
-            <span>Let's Connect</span>
-            <ArrowCircleRightIcon />
-          </button>
+          <Link
+            to={"contact"}
+            spy={true}
+            smooth={true}
+            offset={0}
+            duration={500}
+          >
+            <button>
+              <span>Let's Connect</span>
+              <ArrowCircleRightIcon />
+            </button>
+          </Link>
         </div>
         <div className="header_right">
           <img src={url} alt="user"></img>
