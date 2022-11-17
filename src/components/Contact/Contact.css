@@ -71,6 +71,8 @@
 
 .contact_left > h1 {
   font-size: 70px;
+  letter-spacing: 3px;
+  word-spacing: 5px;
 }
 
 .contact_left > a > button {

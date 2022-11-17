@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import Contact from "./components/Contact/Contact";
 import Header from "./components/Header/Header";
 import NavBar from "./components/NavBar/NavBar";
+import Skills from "./components/Skills/Skills";
 
 function App() {
   const userImage =
@@ -18,7 +19,9 @@ function App() {
         <Header url={userImage} />
       </div>
       <div id="experience"></div>
-      <div id="skills"></div>
+      <div id="skills">
+        <Skills />
+      </div>
       <div id="projects"></div>
       <div id="contact">
         <Contact />

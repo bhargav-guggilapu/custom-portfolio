@@ -17,7 +17,7 @@ export default function Contact() {
           display: "flex",
           justifyContent: "space-between",
           alignItems: "center",
-          padding: "200px 10%",
+          padding: "100px 10%",
         }}
       >
         <div className="contact_left">
