@@ -90,7 +90,7 @@ export default function Skills() {
         }}
       >
         <motion.h1
-          initial={{ y: -200, opacity: 0 }}
+          initial={{ y: -100, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
           transition={{ duration: 1 }}
           style={{

@@ -75,7 +75,7 @@
   word-spacing: 5px;
 }
 
-.contact_left > a > button {
+.contact_btn {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -90,7 +90,7 @@
   transition: transform 0.3s;
 }
 
-.contact_left > a > button:hover {
+.contact_btn:hover {
   transform: scale(1.1);
 }
 

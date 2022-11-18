@@ -23,7 +23,7 @@ export default function Contact() {
       >
         <div className="contact_left">
           <motion.h1
-            initial={{ y: -200, opacity: 0 }}
+            initial={{ y: -100, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
             transition={{ duration: 1 }}
           >
@@ -88,19 +88,22 @@ export default function Contact() {
               </a>
             </motion.div>
           </div>
-          <a
-            href="https://drive.google.com/file/d/1CFyrl1F_H1NPpu3ImnjUoKRkIPwTZM1M/view?usp=sharing"
-            target="_blank"
-            rel="noreferrer"
+          <motion.div
+            initial={{ opacity: 0, y: 100 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1 }}
           >
-            <motion.button
-              initial={{ opacity: 0, y: 100 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5 }}
+            <a
+              href="https://drive.google.com/file/d/1CFyrl1F_H1NPpu3ImnjUoKRkIPwTZM1M/view?usp=sharing"
+              target="_blank"
+              rel="noreferrer"
+              style={{ textDecoration: "none" }}
             >
-              <span>Download Resume</span> <DownloadForOfflineIcon />
-            </motion.button>
-          </a>
+              <button className="contact_btn">
+                <span>Download Resume</span> <DownloadForOfflineIcon />
+              </button>
+            </a>
+          </motion.div>
         </div>
         <motion.div
           initial={{ opacity: 0 }}
