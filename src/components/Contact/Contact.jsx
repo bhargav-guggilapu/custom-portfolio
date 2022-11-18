@@ -8,6 +8,7 @@ import InstagramIcon from "@mui/icons-material/Instagram";
 import DownloadForOfflineIcon from "@mui/icons-material/DownloadForOffline";
 import TelegramIcon from "@mui/icons-material/Telegram";
 import WhatsAppIcon from "@mui/icons-material/WhatsApp";
+import { motion } from "framer-motion";
 
 export default function Contact() {
   return (
@@ -21,19 +22,42 @@ export default function Contact() {
         }}
       >
         <div className="contact_left">
-          <h1>Contact Me</h1>
+          <motion.h1
+            initial={{ y: -200, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            transition={{ duration: 1 }}
+          >
+            Contact Me
+          </motion.h1>
           <div style={{ marginTop: "50px" }}>
             <div>
-              <div className="contact_info">
+              <motion.div
+                initial={{ x: -100 }}
+                whileInView={{ x: 0 }}
+                transition={{ duration: 1 }}
+                className="contact_info"
+                onClick={() => {
+                  window.location.href = "mailto:bhargavguggilapu@gmail.com";
+                }}
+              >
                 <TelegramIcon />
-                <p> bhargavguggilapu@gmail.com</p>
-              </div>
-              <div className="contact_info">
+                <p>bhargavguggilapu@gmail.com</p>
+              </motion.div>
+              <motion.div
+                initial={{ x: 100 }}
+                whileInView={{ x: 0 }}
+                transition={{ duration: 1 }}
+                className="contact_info"
+              >
                 <WhatsAppIcon />
                 <p>(+91) 9149976596</p>
-              </div>
+              </motion.div>
             </div>
-            <div>
+            <motion.div
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              transition={{ duration: 1 }}
+            >
               <a
                 href="https://github.com/bhargav-guggilapu"
                 target="_blank"
@@ -62,19 +86,28 @@ export default function Contact() {
               >
                 <InstagramIcon className="contact_icon" fontSize="large" />
               </a>
-            </div>
+            </motion.div>
           </div>
           <a
             href="https://drive.google.com/file/d/1CFyrl1F_H1NPpu3ImnjUoKRkIPwTZM1M/view?usp=sharing"
             target="_blank"
             rel="noreferrer"
           >
-            <button>
+            <motion.button
+              initial={{ opacity: 0, y: 100 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5 }}
+            >
               <span>Download Resume</span> <DownloadForOfflineIcon />
-            </button>
+            </motion.button>
           </a>
         </div>
-        <div className="contact_right">
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ duration: 1 }}
+          className="contact_right"
+        >
           <form>
             <div>
               <input type="text" placeholder="First Name" required />
@@ -92,7 +125,7 @@ export default function Contact() {
               <SendIcon />
             </button>
           </form>
-        </div>
+        </motion.div>
       </div>
     </div>
   );

@@ -9,6 +9,7 @@ import DescriptionIcon from "@mui/icons-material/Description";
 import Tooltip, { tooltipClasses } from "@mui/material/Tooltip";
 import Zoom from "@mui/material/Zoom";
 import { styled } from "@mui/material/styles";
+import { motion } from "framer-motion";
 
 export default function NavBar() {
   const [scrolled, setScrolled] = useState(false);
@@ -35,7 +36,12 @@ export default function NavBar() {
   });
 
   return (
-    <div className={`navbar ${scrolled ? "active" : ""}`}>
+    <motion.div
+      initial={{ y: -100 }}
+      animate={{ y: 0 }}
+      transition={{ duration: 0.8 }}
+      className={`navbar ${scrolled ? "active" : ""}`}
+    >
       <button className={`navbar_button ${scrolled ? "active" : ""}`}>
         Want to Customize?
       </button>
@@ -152,6 +158,6 @@ export default function NavBar() {
           </BootstrapTooltip>
         </a>
       </div>
-    </div>
+    </motion.div>
   );
 }

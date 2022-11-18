@@ -110,6 +110,7 @@
   align-items: center;
   font-size: 20px;
   margin: 25px 0;
+  cursor: pointer;
 }
 
 .contact_info > p {

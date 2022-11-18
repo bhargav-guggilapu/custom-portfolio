@@ -37,7 +37,6 @@
   padding: 0;
   margin-top: 50px;
   font-size: 80px;
-  animation: fromLeft 0.5s linear;
 }
 
 .header_left > h2 {
@@ -57,9 +56,6 @@
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 5;
   overflow: hidden;
-  animation: pop-in 0.5s linear forwards;
-  animation-delay: 0.5s;
-  transform: scale(0);
 }
 
 .header_left > a > button {
@@ -76,9 +72,6 @@
   margin-top: 30px;
   padding: 10px 15px;
   transition: all 0.3s;
-  animation: show-in 1s linear forwards;
-  animation-delay: 1s;
-  opacity: 0;
 }
 
 .header_left > a > button:hover {
@@ -90,10 +83,6 @@
 
 .header_left > a > button > span {
   padding-right: 10px;
-}
-
-.header_right {
-  animation: pop-in 0.5s linear;
 }
 
 .header_right > img {
@@ -113,32 +102,5 @@
   }
   100% {
     transform: translateY(-30px);
-  }
-}
-
-@keyframes pop-in {
-  from {
-    transform: scale(0);
-  }
-  to {
-    transform: scale(1);
-  }
-}
-
-@keyframes show-in {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-@keyframes fromLeft {
-  from {
-    transform: translateX(-50vw);
-  }
-  to {
-    transform: translateX(0);
   }
 }
