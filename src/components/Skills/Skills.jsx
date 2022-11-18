@@ -79,6 +79,7 @@ export default function Skills() {
   ];
   return (
     <div className="skills">
+      <div className="skills-bg-effect" />
       <div
         style={{
           display: "flex",
@@ -87,6 +88,7 @@ export default function Skills() {
           alignItems: "center",
           padding: "100px 10% 0 10%",
           color: "white",
+          zIndex: "1",
         }}
       >
         <motion.h1
@@ -95,7 +97,7 @@ export default function Skills() {
           transition={{ duration: 1 }}
           style={{
             fontSize: "70px",
-            marginBottom: "70px",
+            marginBottom: "50px",
             letterSpacing: "5px",
           }}
         >

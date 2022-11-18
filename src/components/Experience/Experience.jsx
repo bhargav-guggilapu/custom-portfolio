@@ -76,6 +76,7 @@ export default function Experience() {
 
   return (
     <div className="experience">
+      <div className="experience-bg-effect" />
       <div
         style={{
           display: "flex",
@@ -84,6 +85,7 @@ export default function Experience() {
           alignItems: "center",
           padding: "100px 10% 0 10%",
           color: "white",
+          zIndex: "1",
         }}
       >
         <motion.h1
@@ -92,7 +94,7 @@ export default function Experience() {
           transition={{ duration: 1 }}
           style={{
             fontSize: "70px",
-            marginBottom: "70px",
+            marginBottom: "50px",
             letterSpacing: "5px",
           }}
         >

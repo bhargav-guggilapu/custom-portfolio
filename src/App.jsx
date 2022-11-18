@@ -5,6 +5,7 @@ import NavBar from "./components/NavBar/NavBar";
 import Skills from "./components/Skills/Skills";
 import { motion, useScroll } from "framer-motion";
 import Experience from "./components/Experience/Experience";
+import Projects from "./components/Projects/Projects";
 
 function App() {
   const userImage =
@@ -39,7 +40,9 @@ function App() {
       <div id="skills">
         <Skills />
       </div>
-      <div id="projects"></div>
+      <div id="projects">
+        <Projects />
+      </div>
       <div id="contact">
         <Contact />
       </div>

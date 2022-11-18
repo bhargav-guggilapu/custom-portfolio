@@ -1,0 +1,84 @@
+.projects {
+  min-height: 100vh;
+  min-width: 100%;
+  background-color: #191714;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+}
+
+.projects-bg-effect {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  height: 200px;
+  width: 100%;
+  background-color: #2235ae30;
+  transform: skewY(-12deg);
+}
+.project_left {
+  width: 40%;
+  margin-top: 30px;
+}
+
+.project_right {
+  width: 40%;
+}
+.project_left > img {
+  width: 100%;
+  object-fit: cover;
+  border-radius: 50px;
+}
+
+.project_left > div > a > button {
+  font-size: 15px;
+  color: #2234ae;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 10px;
+  border: 1px solid #2234ae;
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 30px;
+  padding: 10px 15px;
+  transition: all 0.3s;
+}
+
+.project_left > div > a > button:hover {
+  color: white;
+  border: 1px solid white;
+  background-color: #2234ae;
+  transform: scale(1.1);
+}
+
+.project_right > h2 {
+  font-size: 50px;
+  color: #2234ae;
+  margin-bottom: 30px;
+  letter-spacing: 2px;
+  word-spacing: 2px;
+}
+
+.project_right > p {
+  color: rgb(154, 154, 154);
+  letter-spacing: 2px;
+  word-spacing: 5px;
+  font-size: 18px;
+  line-height: 1.6;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 5;
+  overflow: hidden;
+  margin-bottom: 30px;
+}
+
+.project_right > div > span {
+  color: white;
+  padding: 10px 20px;
+  background-color: #2234ae;
+  border-radius: 10px;
+  margin-right: 30px;
+}
