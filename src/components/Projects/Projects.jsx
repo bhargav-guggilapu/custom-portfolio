@@ -7,43 +7,65 @@ export default function Projects() {
   const projects = [
     {
       image:
-        "https://images.unsplash.com/photo-1661961111184-11317b40adb2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2372&q=80",
+        "https://lh3.googleusercontent.com/pw/AL9nZEVvzxE_saG91v5XLagIE45BvxWEo9JhEq5cXDcw7DbxbFvwhbVjJmhA0HXkxFkZ-UBAMRAsVXrxAZm0XIsqU5ebGBVMZ_CaTiDQRgSZPuYT9u2vLQ=w2400",
       title: "Tooble",
       description:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt recusandae nesciunt, nostrum alias adipisci vitae, ex doloremque at consectetur possimus ducimus eos veniam assumenda quaerat eaque numquam laboriosam illo nihil.",
-      languages: ["ReactJS", "Material-UI", "FireBase"],
-      gitLink: "",
-      projectLink: "",
+      languages: ["ReactJS", "Tailwind CSS", "FireBase"],
+      gitLink: "https://github.com/bhargav-guggilapu/tooble",
+      projectLink: "https://bhargav-guggilapu.github.io/tooble/",
     },
     {
       image:
-        "https://images.unsplash.com/photo-1661961111184-11317b40adb2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2372&q=80",
-      title: "Tooble",
+        "https://lh3.googleusercontent.com/pw/AL9nZEVM_Jdvfs2qETNtfJVqFtExE9Ur7x01ILULMzg5GysUMPJy39H2VxloKIGzl1jP_QrPkZ3TyC8Icy9QVKpsGUO6HB4TL-ZsX88WDtEIJG4H0RKyXw=w2400",
+      title: "LinkIn",
       description:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt recusandae nesciunt, nostrum alias adipisci vitae, ex doloremque at consectetur possimus ducimus eos veniam assumenda quaerat eaque numquam laboriosam illo nihil.",
       languages: ["ReactJS", "Material-UI", "FireBase"],
-      gitLink: "",
-      projectLink: "",
+      gitLink: "https://github.com/bhargav-guggilapu/linkin",
+      projectLink: "https://bhargav-guggilapu.github.io/linkin/",
     },
     {
       image:
-        "https://images.unsplash.com/photo-1661961111184-11317b40adb2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2372&q=80",
-      title: "Tooble",
+        "https://lh3.googleusercontent.com/pw/AL9nZEWkWo-6r4ge6QlTUeZ23DYoVBwDWlAMZSqcldyHBl6l49qqWHMeYToU7E3Wop46WUBB99ml3o1DSLOZG4UFWW0cMlJb79PbGRP6rHV6LJnwKwMK8Q=w2400",
+      title: "Movies List",
       description:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt recusandae nesciunt, nostrum alias adipisci vitae, ex doloremque at consectetur possimus ducimus eos veniam assumenda quaerat eaque numquam laboriosam illo nihil.",
-      languages: ["ReactJS", "Material-UI", "FireBase"],
-      gitLink: "",
-      projectLink: "",
+      languages: ["HTML5", "CSS3", "Javascript"],
+      gitLink: "https://github.com/bhargav-guggilapu/movies-list",
+      projectLink: " https://bhargav-guggilapu.github.io/movies-list/",
     },
     {
       image:
-        "https://images.unsplash.com/photo-1661961111184-11317b40adb2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2372&q=80",
-      title: "Tooble",
+        "https://lh3.googleusercontent.com/pw/AL9nZEVIULnLpHWEs1ucgqkfPKKMSXEPz5QQ0oQaO8NjFDALfNnxg-YHVF9z3g-rh2COCDxiL0LzBYCbqd9OMPE4zQDII9Pe-5dqJPelOXpS3k_Pd5BzMg=w2400",
+      title: "Cart Catalog",
       description:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt recusandae nesciunt, nostrum alias adipisci vitae, ex doloremque at consectetur possimus ducimus eos veniam assumenda quaerat eaque numquam laboriosam illo nihil.",
-      languages: ["ReactJS", "Material-UI", "FireBase"],
-      gitLink: "",
-      projectLink: "",
+      languages: ["AngularJS"],
+      gitLink: "https://github.com/bhargav-guggilapu/cart-catalog",
+      projectLink: "https://bhargav-guggilapu.github.io/cart-catalog/",
+    },
+    {
+      image:
+        "https://lh3.googleusercontent.com/pw/AL9nZEXwRvJG7_gPVLGY4edX56we4N5CMzxOwFMcrmGL5a0v4qeQYChHLLntxSrsK2YxSsynKJU5tVJrS_VE2CDmA3F-om0sVHJiTipBJcWKHRUpTh0tsw=w2400",
+      title: "Omnifoods",
+      description:
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt recusandae nesciunt, nostrum alias adipisci vitae, ex doloremque at consectetur possimus ducimus eos veniam assumenda quaerat eaque numquam laboriosam illo nihil.",
+      languages: ["HTML5", "CSS3", "Javascript"],
+      gitLink: "https://github.com/bhargav-guggilapu/responsive-resturant-page",
+      projectLink:
+        "https://bhargav-guggilapu.github.io/responsive-resturant-page/",
+    },
+
+    {
+      image:
+        "https://lh3.googleusercontent.com/pw/AL9nZEWVOQDw6rYmsGq2CrAQlCzvAk3bFk91rYYsXJ5daL8YYptb-LudbkF3-N4DyDszv8oMbIcT8rg41er5CWeiAhQyiISUGg6aNTCWFJnR46YhXq4rYQ=w2400",
+      title: "JT Foods",
+      description:
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt recusandae nesciunt, nostrum alias adipisci vitae, ex doloremque at consectetur possimus ducimus eos veniam assumenda quaerat eaque numquam laboriosam illo nihil.",
+      languages: ["HTML5", "CSS3", "Javascript"],
+      gitLink: "https://github.com/bhargav-guggilapu/resturant-page",
+      projectLink: "https://bhargav-guggilapu.github.io/resturant-page/",
     },
   ];
 
