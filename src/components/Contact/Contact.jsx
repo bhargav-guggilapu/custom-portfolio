@@ -100,7 +100,8 @@ export default function Contact() {
               style={{ textDecoration: "none" }}
             >
               <button className="contact_btn">
-                <span>Download Resume</span> <DownloadForOfflineIcon />
+                <span style={{ marginRight: "15px" }}>Download Resume</span>{" "}
+                <DownloadForOfflineIcon />
               </button>
             </a>
           </motion.div>

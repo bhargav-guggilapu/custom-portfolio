@@ -20,6 +20,7 @@
 .project_left {
   width: 40%;
   margin-top: 30px;
+  position: relative;
 }
 
 .project_right {
@@ -29,6 +30,24 @@
   width: 100%;
   object-fit: cover;
   border-radius: 50px;
+}
+
+.project_left > div {
+  background-color: rgba(0, 0, 0, 0.6);
+  position: absolute;
+  top: 0;
+  border-radius: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.project_left:hover > div {
+  opacity: 1;
 }
 
 .project_left > div > a > button {

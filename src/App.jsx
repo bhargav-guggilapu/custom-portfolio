@@ -28,6 +28,7 @@ function App() {
           height: "5px",
           background: "#2234ae",
           transformOrigin: "0%",
+          zIndex: "9999",
         }}
       />
       <NavBar />

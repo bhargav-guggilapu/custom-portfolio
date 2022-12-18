@@ -149,8 +149,8 @@ export default function Projects() {
                     <h2>{project.title}</h2>
                     <p>{project.description}</p>
                     <div>
-                      {project.languages.map((language) => {
-                        return <span>{language}</span>;
+                      {project.languages.map((language, j) => {
+                        return <span key={j}>{language}</span>;
                       })}
                     </div>
                   </div>
