@@ -95,3 +95,28 @@
   background-position: 100% 100%;
   background-size: 100% 3px;
 }
+
+.input-fields > div,
+.project_input > div {
+  margin: 20px;
+}
+
+.nav_header {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 20px 0 10px 20px;
+  text-align: left;
+}
+
+.nav_header_icon {
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 600px) {
+  .input-fields {
+    width: "100%";
+    text-align: center;
+  }
+}

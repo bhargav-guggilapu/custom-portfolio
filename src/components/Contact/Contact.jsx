@@ -10,7 +10,7 @@ import TelegramIcon from "@mui/icons-material/Telegram";
 import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 import { motion } from "framer-motion";
 
-export default function Contact() {
+export default function Contact({ userData }) {
   return (
     <div className="contact">
       <div
@@ -37,11 +37,11 @@ export default function Contact() {
                 transition={{ duration: 1 }}
                 className="contact_info"
                 onClick={() => {
-                  window.location.href = "mailto:bhargavguggilapu@gmail.com";
+                  window.location.href = `mailto:${userData.email}`;
                 }}
               >
                 <TelegramIcon />
-                <p>bhargavguggilapu@gmail.com</p>
+                <p>{userData.email}</p>
               </motion.div>
               <motion.div
                 initial={{ x: 100 }}
@@ -50,7 +50,7 @@ export default function Contact() {
                 className="contact_info"
               >
                 <WhatsAppIcon />
-                <p>(+91) 9149976596</p>
+                <p>{userData.mobile}</p>
               </motion.div>
             </div>
             <motion.div
@@ -58,32 +58,16 @@ export default function Contact() {
               whileInView={{ opacity: 1 }}
               transition={{ duration: 1 }}
             >
-              <a
-                href="https://github.com/bhargav-guggilapu"
-                target="_blank"
-                rel="noreferrer"
-              >
+              <a href={userData.git} target="_blank" rel="noreferrer">
                 <GitHubIcon className="contact_icon" fontSize="large" />
               </a>
-              <a
-                href="https://www.linkedin.com/in/guggilapu-venkata-siva-bhargav/"
-                target="_blank"
-                rel="noreferrer"
-              >
+              <a href={userData.linkedIn} target="_blank" rel="noreferrer">
                 <LinkedInIcon className="contact_icon" fontSize="large" />
               </a>
-              <a
-                href="https://www.facebook.com/bhargav.arya.528/"
-                target="_blank"
-                rel="noreferrer"
-              >
+              <a href={userData.facebook} target="_blank" rel="noreferrer">
                 <FacebookIcon className="contact_icon" fontSize="large" />
               </a>
-              <a
-                href="https://www.instagram.com/bhargav_gvs/"
-                target="_blank"
-                rel="noreferrer"
-              >
+              <a href={userData.instagram} target="_blank" rel="noreferrer">
                 <InstagramIcon className="contact_icon" fontSize="large" />
               </a>
             </motion.div>
@@ -94,7 +78,7 @@ export default function Contact() {
             transition={{ duration: 1 }}
           >
             <a
-              href="https://drive.google.com/file/d/1CFyrl1F_H1NPpu3ImnjUoKRkIPwTZM1M/view?usp=sharing"
+              href={userData.resume}
               target="_blank"
               rel="noreferrer"
               style={{ textDecoration: "none" }}

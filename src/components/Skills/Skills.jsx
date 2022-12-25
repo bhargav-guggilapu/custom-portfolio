@@ -2,81 +2,22 @@ import React from "react";
 import "./Skills.css";
 import { motion } from "framer-motion";
 
-export default function Skills() {
-  const skills = [
-    {
-      name: "html",
-      img_url: "https://img.icons8.com/color/512/html-5.png",
-      prof: "90",
-    },
-    {
-      name: "css",
-      img_url: "https://img.icons8.com/color/512/css3.png",
-      prof: "90",
-    },
-    {
-      name: "javascript",
-      img_url: "https://img.icons8.com/color/512/javascript.png",
-      prof: "80",
-    },
-    {
-      name: "sass",
-      img_url: "https://img.icons8.com/color/512/sass.png",
-      prof: "50",
-    },
-    {
-      name: "bootstrap",
-      img_url: "https://img.icons8.com/color/512/bootstrap.png",
-      prof: "60",
-    },
-    {
-      name: "material-ui",
-      img_url: "https://img.icons8.com/color/512/material-ui.png",
-      prof: "50",
-    },
-    {
-      name: "react",
-      img_url: "https://img.icons8.com/office/512/react.png",
-      prof: "80",
-    },
-    {
-      name: "angular",
-      img_url: "https://img.icons8.com/color/512/angularjs.png",
-      prof: "80",
-    },
-    {
-      name: "typescript",
-      img_url: "https://img.icons8.com/color/512/typescript.png",
-      prof: "60",
-    },
+export default function Skills({ userData }) {
+  const skills = userData.skills?.map((skill) => {
+    const prof = skill.substring(skill.indexOf("-") + 1).trim();
+    const name = skill.substring(0, skill.indexOf("-")).trim();
+    const img_url = `https://img.icons8.com/color/512/${name.replaceAll(
+      " ",
+      "-"
+    )}.png`;
 
-    {
-      name: "python",
-      img_url: "https://img.icons8.com/color/512/python.png",
-      prof: "60",
-    },
-    {
-      name: "git",
-      img_url: "https://img.icons8.com/color/512/git.png",
-      prof: "60",
-    },
-    {
-      name: "firebase",
-      img_url: "https://img.icons8.com/color/512/firebase.png",
-      prof: "50",
-    },
-    {
-      name: "jenkins",
-      img_url: "https://img.icons8.com/color/512/jenkins.png",
-      prof: "40",
-    },
-    {
-      name: "keycloak",
-      img_url:
-        "https://www.keycloak.org/resources/images/keycloak_icon_512px.svg",
-      prof: "40",
-    },
-  ];
+    return {
+      name,
+      img_url,
+      prof,
+    };
+  });
+
   return (
     <div className="skills">
       <div className="skills-bg-effect" />
@@ -104,16 +45,40 @@ export default function Skills() {
           Skills
         </motion.h1>
         <div className="skill-set">
-          {skills.map((skill, i) => {
+          {skills?.map((skill, i) => {
             return (
               <div className="skill" key={i}>
                 <motion.img
+                  id={"skillImg" + i}
                   initial={{ x: i % 2 === 0 ? -140 : 140 }}
                   whileInView={{ x: 0 }}
                   transition={{ duration: 0.5 }}
                   src={skill.img_url}
+                  onError={() => {
+                    document.getElementById("skillImg" + i).style.display =
+                      "none";
+                    document.getElementById("skillText" + i).style.display =
+                      "block";
+                  }}
                   alt={skill.name}
                 />
+                <motion.span
+                  initial={{ x: i % 2 === 0 ? -140 : 140 }}
+                  whileInView={{ x: 0 }}
+                  transition={{ duration: 0.5 }}
+                  id={"skillText" + i}
+                  className="no-image-text"
+                >
+                  <span
+                    style={{
+                      display: "flex",
+                      justifyContent: "center",
+                      alignItems: "center",
+                    }}
+                  >
+                    {skill.name}
+                  </span>
+                </motion.span>
                 <div>
                   <p>{skill.name.toUpperCase()}</p>
                   <p>{skill.prof}%</p>

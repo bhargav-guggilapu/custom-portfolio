@@ -10,69 +10,29 @@ import WorkOutlineIcon from "@mui/icons-material/WorkOutline";
 import SchoolOutlinedIcon from "@mui/icons-material/SchoolOutlined";
 import CalendarMonthOutlinedIcon from "@mui/icons-material/CalendarMonthOutlined";
 
-export default function Experience() {
+export default function Experience({ userData }) {
   const [value, setValue] = useState("1");
-  const educationData = [
-    {
-      designation: "B.Tech",
-      stream: "ECE",
-      city: "Srinagar",
-      name: "NIT Srinagar",
-      startDate: "08/2019",
-      endDate: "05/2023",
-    },
-    {
-      designation: "Intermediate",
-      stream: "MPC",
-      city: "Vijayawada",
-      name: "Narayana Junior College",
-      startDate: "04/2017",
-      endDate: "05/2019",
-    },
-    {
-      designation: "Schooling",
-      stream: "",
-      city: "Tanuku",
-      name: "Sasi E.M High School",
-      startDate: "03/2016",
-      endDate: "03/2017",
-    },
-  ];
+  const educationData = userData.educations?.map((edu) => {
+    return {
+      designation: edu.qualification,
+      stream: edu.specialization,
+      city: edu.location,
+      name: edu.company,
+      startDate: edu.startDate,
+      endDate: edu.endDate,
+    };
+  });
 
-  const workData = [
-    {
-      designation: "Associate Software Engineer",
-      stream: "Angular",
-      city: "Charlotte",
-      name: "Tabner",
-      startDate: "01/2022",
-      endDate: "",
-    },
-    {
-      designation: "Junior Software Developer",
-      stream: "React-Native",
-      city: "Hyderabad",
-      name: "Tabner",
-      startDate: "08/2021",
-      endDate: "01/2022",
-    },
-    {
-      designation: "Intern",
-      stream: "Python",
-      city: "Hyderabad",
-      name: "NSIC",
-      startDate: "04/2021",
-      endDate: "07/2021",
-    },
-    {
-      designation: "Campus Ambassador",
-      stream: "",
-      city: "Bengaluru",
-      name: "Verzeo",
-      startDate: "01/2021",
-      endDate: "03/2021",
-    },
-  ];
+  const workData = userData.works?.map((work) => {
+    return {
+      designation: work.designation,
+      stream: work.workedOn,
+      city: work.location,
+      name: work.company,
+      startDate: work.startDate,
+      endDate: work.endDate,
+    };
+  });
 
   return (
     <div className="experience">
@@ -140,7 +100,7 @@ export default function Experience() {
 const DataRender = ({ workData }) => {
   return (
     <div style={{ marginTop: "30px" }}>
-      {workData.map((data, i) => {
+      {workData?.map((data, i) => {
         return (
           <motion.div
             key={i}

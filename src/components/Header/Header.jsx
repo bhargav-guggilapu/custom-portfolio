@@ -5,7 +5,7 @@ import Typewriter from "typewriter-effect";
 import { Link } from "react-scroll";
 import { motion } from "framer-motion";
 
-export default function Header({ url }) {
+export default function Header({ userData }) {
   return (
     <div className="header">
       <div
@@ -23,7 +23,7 @@ export default function Header({ url }) {
             whileInView={{ x: 0 }}
             transition={{ duration: 0.5 }}
           >
-            Hi! Bhargav Here.
+            Hi! {userData.name} Here.
           </motion.h1>
           <motion.h2
             initial={{ x: -500 }}
@@ -32,11 +32,7 @@ export default function Header({ url }) {
           >
             <Typewriter
               options={{
-                strings: [
-                  "I'm a Web Developer",
-                  "I'm a Software Engineer",
-                  "I'm a Web Designer",
-                ],
+                strings: userData.designations?.map((des) => `I'm a ${des}`),
                 autoStart: true,
                 loop: true,
               }}
@@ -48,10 +44,7 @@ export default function Header({ url }) {
             whileInView={{ scale: 1, opacity: 1 }}
             transition={{ duration: 1 }}
           >
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos eveniet
-            perspiciatis rem ut perferendis. Voluptatem minus maxime unde
-            obcaecati, ea quidem ab numquam. Nam ipsam excepturi a, voluptatem
-            temporibus fugit.
+            {userData.about}
           </motion.p>
           <Link
             to={"contact"}
@@ -76,7 +69,7 @@ export default function Header({ url }) {
           transition={{ duration: 1 }}
           className="header_right"
         >
-          <img src={url} alt="user"></img>
+          <img src={userData.userImage} alt="user"></img>
         </motion.div>
       </div>
     </div>
