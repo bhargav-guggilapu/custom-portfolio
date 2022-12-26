@@ -20,6 +20,7 @@ import Chip from "@mui/material/Chip";
 import Paper from "@mui/material/Paper";
 import Divider from "@mui/material/Divider";
 import AddCircleIcon from "@mui/icons-material/AddCircle";
+import { useNavigate } from "react-router-dom";
 
 const ListItem = styled("li")(({ theme }) => ({
   margin: theme.spacing(0.5),
@@ -34,6 +35,7 @@ export default function NavBar({ userData }) {
   const [educations, setEducations] = useState([]);
   const [open, setOpen] = useState(false);
   const [isSaving, setIsSaving] = useState(false);
+  const navigate = useNavigate();
 
   const nameRef = useRef();
   const emailRef = useRef();
@@ -80,7 +82,7 @@ export default function NavBar({ userData }) {
       designations.length > 0 &&
       skills.length > 0
     ) {
-      await fetch(
+      const res = await fetch(
         "https://custom-portfolio-a3d7e-default-rtdb.firebaseio.com/users.json",
         {
           method: "POST",
@@ -106,8 +108,13 @@ export default function NavBar({ userData }) {
           },
         }
       );
+      const data = await res.json();
       setOpen(false);
       handleClose();
+      alert(
+        `Checkout Your Portfolio - https://bhargav-guggilapu.github.io/custom-portfolio/#/${data.name}`
+      );
+      return navigate(`/${data.name}`);
     }
   };
 
